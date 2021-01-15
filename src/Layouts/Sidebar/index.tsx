@@ -1,7 +1,6 @@
 import React, { useRef, useState, forwardRef, useImperativeHandle } from 'react';
 import { SidebarBody, SidebarRefObject, SidebarProps, Sidebar } from '@paljs/ui/Sidebar';
 import { Menu, MenuRefObject } from '@paljs/ui/Menu';
-import { EvaIcon } from '@paljs/ui/Icon';
 import menuItems from '../menuItem';
 import { Link } from 'gatsby';
 import { Location } from '@reach/router';
@@ -11,7 +10,6 @@ export const getPathReady = (path: string) => {
 };
 
 const SidebarCustom: React.ForwardRefRenderFunction<Omit<SidebarRefObject, 'hide'>, SidebarProps> = (props, ref) => {
-  const [menuState, setMenuState] = useState(false);
   const sidebarRef = useRef<SidebarRefObject>(null);
   const menuRef = useRef<MenuRefObject>(null);
   const [seeHeader, setSeeHeader] = useState(true);
@@ -28,11 +26,7 @@ const SidebarCustom: React.ForwardRefRenderFunction<Omit<SidebarRefObject, 'hide
 
   return (
     <Sidebar getState={getState} ref={sidebarRef} property="start" containerFixed responsive className="menu-sidebar">
-      {seeHeader && (
-        <header>
-          
-        </header>
-      )}
+      {seeHeader && <header></header>}
       <SidebarBody>
         <Location>
           {({ location }) => (
