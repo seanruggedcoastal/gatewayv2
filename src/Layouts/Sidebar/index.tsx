@@ -1,7 +1,6 @@
 import React, { useRef, useState, forwardRef, useImperativeHandle } from 'react';
 import { SidebarBody, SidebarRefObject, SidebarProps, Sidebar } from '@paljs/ui/Sidebar';
 import { Menu, MenuRefObject } from '@paljs/ui/Menu';
-import { Button } from '@paljs/ui/Button';
 import { EvaIcon } from '@paljs/ui/Icon';
 import menuItems from '../menuItem';
 import { Link } from 'gatsby';
@@ -31,17 +30,7 @@ const SidebarCustom: React.ForwardRefRenderFunction<Omit<SidebarRefObject, 'hide
     <Sidebar getState={getState} ref={sidebarRef} property="start" containerFixed responsive className="menu-sidebar">
       {seeHeader && (
         <header>
-          <Button
-            size="Tiny"
-            status="Primary"
-            onClick={() => {
-              setMenuState(!menuState);
-              menuRef.current?.toggle();
-            }}
-            fullWidth
-          >
-            {menuState ? <EvaIcon name="arrow-circle-up" /> : <EvaIcon name="arrow-circle-down" />}
-          </Button>
+          
         </header>
       )}
       <SidebarBody>
