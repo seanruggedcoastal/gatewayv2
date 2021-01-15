@@ -38,15 +38,5 @@ module.exports = {
         trackingId: 'UA-171177495-3',
       },
     },
-    resolve: `gatsby-source-cosmicjs`,
-    options: {
-      bucketSlug: `thrivent-development`, // Get this value in Bucket > Settings
-      objectTypes: [`posts`],
-      // If you have enabled read_key to fetch data (optional).
-      apiAccess: {
-        read_key: `28u6A0VX2ok7lb14px12odvOcg18Nyjh3o6UqdG5rUcykBzUcG`, // Get this value in Bucket > Settings
-      },
-      localMedia: true // Download media locally for gatsby image (optional)
-    }
   ],
 };
