@@ -108,6 +108,12 @@ const Header: React.FC<HeaderProps> = (props) => {
                 </Link>
               ),
             },
+          ]}
+        />
+        <Actions
+          size="Small"
+          className="right"
+          actions={[
             {
               content: (
                 <SelectStyled
@@ -118,25 +124,6 @@ const Header: React.FC<HeaderProps> = (props) => {
                   options={themeOptions}
                   onChange={({ value }: { value: DefaultTheme['name'] }) => props.theme.set(value)}
                 />
-              ),
-            },
-          ]}
-        />
-        <Actions
-          size="Small"
-          className="right"
-          actions={[
-            {
-              content: (
-                <a
-                  className="left"
-                  href={`https://github.com/paljs/gatsby-admin-template`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <span className="github">Support us in GitHub</span>
-                  <img src={`https://badgen.net/github/stars/paljs/gatsby-admin-template`} />
-                </a>
               ),
             },
             {
@@ -153,7 +140,7 @@ const Header: React.FC<HeaderProps> = (props) => {
                       ]}
                       Link={Link}
                     >
-                      <User image="url('/icons/icon-72x72.png')" name="Ahmed Elywa" title="Manger" size="Medium" />
+                      <User image="url('/icons/icon-72x72.png')" name="Sean Mahoney" title="Developer" size="Medium" />
                     </ContextMenu>
                   )}
                 </Location>
