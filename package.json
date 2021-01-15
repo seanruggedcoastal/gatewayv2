@@ -40,7 +40,9 @@
     "dev": "gatsby develop",
     "start": "npm run dev",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -50,6 +52,11 @@
     "url": "https://github.com/paljs/gatsby-admin-template/issues"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@storybook/addon-actions": "^6.1.14",
+    "@storybook/addon-essentials": "^6.1.14",
+    "@storybook/addon-links": "^6.1.14",
+    "@storybook/react": "^6.1.14",
     "@types/node": "14.14.12",
     "@types/react": "17.0.0",
     "@types/react-dom": "17.0.0",
@@ -58,6 +65,7 @@
     "@types/styled-components": "5.1.5",
     "@typescript-eslint/eslint-plugin": "4.9.1",
     "@typescript-eslint/parser": "4.9.1",
+    "babel-loader": "^8.2.2",
     "eslint": "7.15.0",
     "eslint-config-prettier": "7.0.0",
     "eslint-plugin-prettier": "3.2.0",
